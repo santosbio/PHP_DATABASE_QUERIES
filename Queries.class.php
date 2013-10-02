@@ -72,12 +72,12 @@ class Queries
 
    }
 
-   public function selDb($table, $fields, $where = '', $order = '', $limit = '')
+   public function selDb($table, $fields, $where, $order, $limit, $group)
    {
 
 		$e = "SELECT ".$fields." FROM ".$table;
 
-		if (!empty($where)) {
+		if (!empty($where) && $where != NULL) {
 			$w = '';
 			foreach ($where as $k => $val) {
 				$w .= $k . " = '" . $val . "',";
@@ -86,18 +86,22 @@ class Queries
 			$e .= " WHERE ".$w;
 		}
 
-		if (!empty($order)) {
+		if (!empty($order) && $order != NULL) {
 			$o = '';
 			foreach ($order as $key => $value) {
-				$o .= $k . " " . $val;
+				$o .= $key . " " . $value;
 			}
-			$o = substr($o, 0, -1);
 			$e .= " ORDER BY ".$o;
 		}	
 
-		if (!empty($limit)) {
+		if (!empty($limit) && $limit != NULL) {
 
 			$e .= " LIMIT ".$limit;
+		}
+
+		if (!empty($group) && $group != NULL) {
+
+			$e .= " GROUP BY ".$group;
 		}
 
 		$q = mysql_query($e) or die(mysql_error());
