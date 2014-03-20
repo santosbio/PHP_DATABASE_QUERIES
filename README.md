@@ -1,4 +1,4 @@
-# PHP DATABASE QUERIES [versão beta]
+# PHP DATABASE QUERIES
 
 ## Introdução
 
