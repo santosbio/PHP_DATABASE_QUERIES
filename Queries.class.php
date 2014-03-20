@@ -4,7 +4,7 @@
 *
 *   Class Queries()
 *
-*	@param  string $table = nome da tabela. Exemplo: 'string'.
+*	@param string $table = nome da tabela. Exemplo: 'string'.
 *   @param string $fields = campos da tabela, separados por vírgula e sem espaços. Exemplo: 'string1,string2,string3'.
 *   @param array $values = valores para popular as tabelas. (array unidimensional com chave não definida)
 *	@param array $where = condição para a query. (array unidimensional. O campo da tabela deve ser definido como chave do array. Ex.: array('nome'=>'João') )
@@ -33,7 +33,7 @@ class Queries
        
    }
 
-   public function insertDb($table, $fields, $values)
+   public function insert_field($fields, $table, $values)
    {
    		
    		$v = '';
@@ -48,7 +48,7 @@ class Queries
    		
    }
 
-   public function upDb($table, $fields, $values, $where)
+   public function update_field($fields, $table, $values, $where)
    {
 
 		$c = explode(',', $fields);
@@ -72,7 +72,7 @@ class Queries
 
    }
 
-   public function selDb($table, $fields, $where, $order, $limit, $group)
+   public function select_field($fields, $table, $where=NULL, $order=NULL, $limit=NULL, $group=NULL)
    {
 
 		$e = "SELECT ".$fields." FROM ".$table;
@@ -110,7 +110,7 @@ class Queries
 
    }
 
-   public function delDb($table, $where)
+   public function delete_field($table, $where)
    {
    		$w = '';
 
