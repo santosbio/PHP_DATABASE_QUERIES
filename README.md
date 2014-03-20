@@ -38,37 +38,37 @@ Iniciada a classe, basta realizar a query normalmente:
 
 
 ####$fields
-Tipo: `string`.
-Refere-se aos campos da tabela, <b>separados por vírgula e sem espaços</b>.
+Tipo: `string`.<br>
+Refere-se aos campos da tabela, <b>separados por vírgula e sem espaços</b>.<br>
 Exemplo: `'string1,string2,string3'`
 
 ####$table
-Tipo: `string`
-Refere-se ao nome da tabela.
+Tipo: `string`<br>
+Refere-se ao nome da tabela.<br>
 Exemplo: `'tabela1'`
 
 ####$values
-Tipo: `array unidimensional com chave não definida`
-Refere-se aos valores para popular as tabelas.
+Tipo: `array unidimensional com chave não definida`<br>
+Refere-se aos valores para popular as tabelas.<br>
 Exemplo: `array(valor 1, valor 2, valor 3, ... , valor n)`
 
 ####$where
-Tipo: `array unidimensional com chave definida`
-Refere-se às condições de busca para a query.
-O campo da tabela deve ser definido como chave do array.
+Tipo: `array unidimensional com chave definida`<br>
+Refere-se às condições de busca para a query.<br>
+O campo da tabela deve ser definido como chave do array.<br>
 Exemplo: `array('nome'=>'João')`
 
 ####$order
-Tipo: `array unidimensional com chave definida`
-Refere-se à ordenação dos resultados da query.
-O campo da tabela deve ser definido como chave do array, e o tipo de ordenação (ASC ou DESC).
+Tipo: `array unidimensional com chave definida`<br>
+Refere-se à ordenação dos resultados da query.<br>
+O campo da tabela deve ser definido como chave do array, e o tipo de ordenação (ASC ou DESC).<br>
 Exemplo: `array(nome=>DESC)`
 
 ####$limit
-Tipo:
-Refere-se à limitação dos resultados a uma faixa de valores.
-Devem ser informados dois números, <b>separados por vírgula e sem espaços</b>.
-O primeiro número refere-se ao primeiro registro que se deseja exibir. O segundo, à quantidade de registros a serem exibidos.
+Tipo: `string`<br>
+Refere-se à limitação dos resultados a uma faixa de valores.<br>
+Devem ser informados dois números, <b>separados por vírgula e sem espaços</b>.<br>
+O primeiro número refere-se ao primeiro registro que se deseja exibir. O segundo, à quantidade de registros a serem exibidos.<br>
 Exemplo: `'0,5'`.
 
 
