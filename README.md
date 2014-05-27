@@ -12,7 +12,7 @@ O objetivo dessa classe é conseguir executar queries da forma mais organizada e
 Para utilizar essa classe, basta incluí-la em seu arquivo:
 
 ```php
-include "../GitHub/PHP_DATABASE_QUERIES/Queries.class.php";
+include "Queries.class.php";
 ```
 
 Feita a inclusão do arquivo, basta iniciar a classe. Veja um exemplo:
