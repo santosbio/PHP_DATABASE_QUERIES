@@ -41,11 +41,24 @@ Iniciada a classe, basta realizar a query normalmente:
 Tipo: `string`.<br>
 Refere-se aos campos da tabela, <b>separados por vírgula e sem espaços</b>.<br>
 Exemplo: `'string1,string2,string3'`
+<b style="color: red">IMPORTANTE:</b><br>
+Para seleção de duas tabelas com Inner Join, deve-se lembrar de informar os aliases das tabelas nos campos.  Exemplo:
+<b>`'alias.campo1,alias.campo2,alias.campo3[...]'`</b>
 
 ####$table
 Tipo: `string`<br>
 Refere-se ao nome da tabela.<br>
-Exemplo: `'tabela1'`
+Exemplo: `'tabela1'`<br>
+<b style="color: red">IMPORTANTE:</b><br>
+Para seleção de duas tabelas com Inner Join, deve-se utilizar um array como parâmetro ao informar as tabelas, sendo que os aliases das tabelas devem ser definidos como chave primária no array. Exemplo:
+<b>`array('alias'=>'tabela')`</b>
+
+####$on
+######(somente em casos de Inner Join)
+Tipo: `string`<br>
+Refere-se ao parâmetro que faz a ligação das tabelas.<br>
+Exemplo: `'alias1.campo1 = alias2.campo2'`<br>
+
 
 ####$values
 Tipo: `array unidimensional com chave não definida`<br>
