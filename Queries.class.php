@@ -16,8 +16,7 @@
 *
 *   Autor: Adriano dos Santos
 *   E-mail: santosbio@gmail.com
-*   Empresa: Agência Sic - http://agenciasic.com.br
-*	Docs: https://github.com/santosbio2/PHP_DATABASE_QUERIES
+*   Docs: https://github.com/santosbio2/PHP_DATABASE_QUERIES
 *   
 */
 
